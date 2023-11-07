@@ -14,13 +14,7 @@ gimme([5, 10, 14]) => 1
 
 
 function gimme (triplet) {
-    let tripletCopy = [...triplet]
-    let iMin = tripletCopy.indexOf(Math.min(...tripletCopy))
-    let mina =tripletCopy.splice(iMin,1)
-    let iMax = tripletCopy.indexOf(Math.max(...tripletCopy))
+    let sortedArr = [...triplet].sort((a,b)=> a-b)
     
-     let maxa = tripletCopy.splice(iMax,1)
-    
-     return triplet.indexOf(tripletCopy[0])
-   }
-  
+    return triplet.indexOf(sortedArr[1])
+  }
